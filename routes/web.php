@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\PermissionController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
-
+use App\Http\Controllers\RolesController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,8 @@ use Inertia\Inertia;
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
-Route::get('/', function () {
-    return Inertia::render('Index');
+Route::prefix('admin')->group(function () {
+    Route::resource('/roles', RolesController::class);
+    Route::resource('/users', UserController::class);
+    Route::resource('/permissions', PermissionController::class);
 });
