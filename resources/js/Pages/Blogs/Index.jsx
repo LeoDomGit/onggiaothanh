@@ -174,15 +174,17 @@ function Index() {
             style={{ height: 400, width: 'auto' }}
           >
 
-            <SwiperSlide>
-              <div className="slider-image-container d-flex justify-content-center align-items-center">
-                <img
-                  src="https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_640.jpg"
-                  className="slider-image"
-                  alt="Slide 1"
-                />
-              </div>
-            </SwiperSlide>
+           {item.images.map((image,index)=>(
+             <SwiperSlide>
+             <div className="slider-image-container d-flex justify-content-center align-items-center">
+               <img
+                 src={image.image}
+                 className="slider-image"
+                 alt="Slide 1"
+               />
+             </div>
+           </SwiperSlide>
+           ))}
           </Swiper>
               </>:''}
               </VerticalTimelineElement>
