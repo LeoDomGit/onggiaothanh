@@ -27,6 +27,7 @@ class BlogRequest extends FormRequest
         $id = $this->route('id');
         if ($this->isMethod('post')) {
             return [
+                'title'=>'required',
                 'date'    => 'required|date',
                 'content' => 'required|string',
                 'images'=>'array',

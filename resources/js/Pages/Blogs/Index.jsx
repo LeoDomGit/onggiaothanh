@@ -19,7 +19,7 @@ function Index() {
   const [content, setContent] = useState('');
   const [images, setImages] = useState([]);
   const [timelineItems, setTimelineItems] = useState([]);
-
+  const [title,setTitle]= useState('');
   const updateFiles = (incommingFiles) => {
     setImages(incommingFiles);
   };
@@ -47,13 +47,14 @@ function Index() {
   }, []);
 
   const submitBlog = () => {
-    if (date === '' || content === '') {
+    if (date === '' || content === ''||title=='') {
       notyf.error("Thiếu ngày và nội dung");
     } else if (images.length === 0) {
       notyf.error("Thiếu hình ảnh");
     } else {
       var formData = new FormData();
       formData.append("date", date);
+      formData.append("title", title);
       formData.append('content', content);
       images.forEach(el => {
         formData.append('images[]', el.file);
@@ -77,6 +78,7 @@ function Index() {
         </Modal.Header>
         <Modal.Body>
           <input type="date" className='form-control mb-3' onChange={(e) => setDate(e.target.value)} />
+          <input type="text" className='form-control mb-3' onChange={(e) => setTitle(e.target.value)} />
           <div className="row">
             <div className="col-md">
               <CKEditor onBlur={setContent} />
@@ -170,7 +172,7 @@ function Index() {
             slidesPerView={1}
             style={{ height: 400, width: 'auto' }}
           >
-            
+
             <SwiperSlide>
               <div className="slider-image-container d-flex justify-content-center align-items-center">
                 <img
