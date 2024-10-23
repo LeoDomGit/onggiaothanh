@@ -162,7 +162,7 @@ function Index() {
                 <h3 className="vertical-timeline-element-title mb-2">
                   {item.title}
                 </h3>
-                <div
+                <div className='text-start'
       dangerouslySetInnerHTML={{__html: item.content}}
     />
               
