@@ -13,7 +13,7 @@ return new class extends Migration
     {
         if (Schema::hasTable('blogs')) {
             Schema::table('blogs', function (Blueprint $table) {
-                $table->string('title',255);
+                $table->string('title',255)->after('date');
             });
         }
     }

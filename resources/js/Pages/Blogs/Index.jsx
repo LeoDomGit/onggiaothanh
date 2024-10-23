@@ -159,11 +159,12 @@ function Index() {
                 date={item.date}
                 iconStyle={{ background: index === 0 ? 'rgb(33, 150, 243)' : 'black', color: '#fff' }}
               >
-                <h3 className="vertical-timeline-element-title">
+                <h3 className="vertical-timeline-element-title mb-2">
+                  {item.title}
+                </h3>
                 <div
       dangerouslySetInnerHTML={{__html: item.content}}
     />
-                </h3>
               
               {item.images.length>0?
               <>
