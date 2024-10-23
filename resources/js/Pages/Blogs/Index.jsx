@@ -96,8 +96,15 @@ function Index() {
           <Button variant="primary" onClick={submitBlog}>Thêm</Button>
         </Modal.Footer>
       </Modal>
+              <div  style={{
+          backgroundImage: 'url(https://img.freepik.com/premium-photo/composition-valentines-day-delicate-pink-background-generative-ai_70251-28133.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}>
 
-      <div className="container mt-2">
+             
+      <div  className="container pt-3">
         {/* <div className="row">
           <Swiper
             spaceBetween={50}
@@ -143,7 +150,7 @@ function Index() {
         </div>
 
         {/* Chrono timeline component */}
-        <div className="row mt-3 text-center mb-5 d-flex justify-content-center">
+        <div className="row mt-3 text-center d-flex justify-content-center">
           <div className="col-md-9">
             <VerticalTimeline>
               {timelineItems.length > 0 && timelineItems.map((item,index) => (
@@ -193,7 +200,7 @@ function Index() {
           </div>
         </div>
       </div>
-
+      </div>
       {/* Custom styles */}
       <style jsx>{`
         .slider-image-container {
