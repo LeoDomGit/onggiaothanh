@@ -98,7 +98,7 @@ function Index() {
       </Modal>
 
       <div className="container mt-2">
-        <div className="row">
+        {/* <div className="row">
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
@@ -107,7 +107,7 @@ function Index() {
             <SwiperSlide>
               <div className="slider-image-container d-flex justify-content-center align-items-center">
                 <img
-                  src="https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_640.jpg"
+                  src="https://literaturevaults.com/wp-content/uploads/2024/02/Two-lovers-sharing-a-quiet-moment-in-a-spring-garden-1024x768.jpg"
                   className="slider-image"
                   alt="Slide 1"
                 />
@@ -134,7 +134,7 @@ function Index() {
               </div>
             </SwiperSlide>
           </Swiper>
-        </div>
+        </div> */}
 
         <div className="row mt-3 text-center">
           <div className="col-md text-center">
