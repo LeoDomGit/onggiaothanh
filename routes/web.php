@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\PermissionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RolesController;
@@ -23,3 +24,4 @@ Route::prefix('admin')->group(function () {
     Route::resource('/users', UserController::class);
     Route::resource('/permissions', PermissionController::class);
 });
+Route::get('/',[BlogsController::class,'index']);
